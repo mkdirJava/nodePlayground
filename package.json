@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\"",
     "build": "npx tsc",
-    "start": "npx tsc && node ./dist/srcserver.js",
+    "start": "npm run build && node ./dist/src/server.js",
     "debug": "nodemon --legacy-watch --watch ./dist/src/ --inspect=0.0.0.0:9229 --nolazy ./dist/src/server.js"
   },
   "author": "Mr Li",
