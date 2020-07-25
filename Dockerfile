@@ -1,4 +1,4 @@
-FROM node:12
+FROM node:12 as debug
 
 WORKDIR /usr/src/app
 
@@ -8,6 +8,14 @@ RUN npm install
 
 COPY . .
 
+RUN npm run build 
+
 EXPOSE 8080
 
-ENTRYPOINT [ "node --inspect", "./dist/server.js" ]
+CMD [ "npm", "run", "debug" ]
+
+FROM node:12 as prod
+
+COPY . .
+
+CMD [ "npm", "run", "start" ]

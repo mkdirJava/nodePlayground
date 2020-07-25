@@ -2,11 +2,11 @@ version: '3.6'
 
 services:
   app: 
-    build: .
+    build: 
+      context: .
+    volumes:
+      - ./dist/src:/usr/src/app/dist/src/ # same folder structure on local machine and docker container
     ports:
       - "8080:8080" 
       - "9229:9229"
-    command:
-      - node
-      - "--inspect=*"
-      - "." 
+    command: npm run debug

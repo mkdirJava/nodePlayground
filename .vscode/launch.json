@@ -19,7 +19,7 @@
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "env": {
-                "port":8080
+                "port":"8080"
             }
         },
         {
@@ -37,7 +37,9 @@
             "port": 9229,
             "remoteRoot": "/usr/src/app",
             "localRoot": "${workspaceFolder}",
-            "protocol": "inspector"
+            "protocol": "inspector",
+            "outFiles": ["${workspaceFolder}/dist/src/**/*.js"], // all compiled JavaScript files
+            "sourceMaps": true,
         }
     ]
 }

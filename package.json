@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\"",
-    "start": "npx tsc && node --inspect ./dist/server.js"
+    "build": "npx tsc",
+    "start": "npx tsc && node ./dist/srcserver.js",
+    "debug": "nodemon --legacy-watch --watch ./dist/src/ --inspect=0.0.0.0:9229 --nolazy ./dist/src/server.js"
   },
   "author": "Mr Li",
   "license": "ISC",
@@ -15,6 +17,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "jest": "^26.1.0"
+    "jest": "^26.1.0",
+    "nodemon": "^2.0.4"
   }
 }

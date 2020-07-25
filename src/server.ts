@@ -6,8 +6,8 @@ const port = process.env.port || 8080;
 
 //routing
 app.get("/",(req,res)=>{
-    console.log("here I am ")
-    res.send("HI There ")
+    console.log("TIME");
+    res.send("HI There NONES");
 })
 
 app.listen(port,()=>{
