@@ -11,10 +11,6 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "runtimeArgs": [
-                "run-script",
-                "start"
-            ],
             "program": "${workspaceFolder}/dist/server.js",
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
@@ -32,6 +28,16 @@
             "name": "attach to remote",
             "address": "localhost",
             "port": 9229
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "attach to remote docker",
+            "address": "localhost",
+            "port": 9229,
+            "remoteRoot": "/usr/src/app",
+            "localRoot": "${workspaceFolder}",
+            "protocol": "inspector"
         }
     ]
 }
