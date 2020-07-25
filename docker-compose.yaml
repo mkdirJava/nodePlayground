@@ -4,6 +4,7 @@ services:
   app: 
     build: 
       context: .
+      target: debug
     volumes:
       - ./dist/src:/usr/src/app/dist/src/ # same folder structure on local machine and docker container
     ports:
