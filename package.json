@@ -1,0 +1,20 @@
+{
+  "name": "nodejstooling",
+  "version": "1.0.0",
+  "description": "Tooling Project ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\"",
+    "start": "npx tsc && node --inspect ./dist/server.js"
+  },
+  "author": "Mr Li",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.7",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^26.1.0"
+  }
+}
